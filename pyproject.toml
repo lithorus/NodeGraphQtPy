@@ -27,8 +27,5 @@ build-backend = "hatchling.build"
 [tool.hatch.version]
 source = "versioningit"
 
-[tool.hatch.version.format]
-dirty = "{version}"
-
 [tool.hatch.build.targets.wheel]
 packages = ["NodeGraphQtPy"]

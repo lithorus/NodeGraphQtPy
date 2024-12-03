@@ -1,4 +1,4 @@
-from NodeGraphQt import BaseNode, BaseNodeCircle
+from NodeGraphQtPy import BaseNode, BaseNodeCircle
 
 
 class BasicNodeA(BaseNode):

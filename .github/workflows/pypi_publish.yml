@@ -22,9 +22,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install build twine
 
-      - name: Prepare package
-        run: rm -rf NodeGraphQtPy && mv NodeGraphQt NodeGraphQtPy
-
       - name: Build package
         run: python -m build
 

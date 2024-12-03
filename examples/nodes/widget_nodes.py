@@ -1,4 +1,4 @@
-from NodeGraphQt import BaseNode
+from NodeGraphQtPy import BaseNode
 
 
 class DropdownMenuNode(BaseNode):

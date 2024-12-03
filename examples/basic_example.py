@@ -106,7 +106,7 @@ def main():
     graph.clear_selection()
     graph.fit_to_selection()
 
-    # Custom builtin widgets from NodeGraphQt
+    # Custom builtin widgets from NodeGraphQtPy
     # ---------------------------------------
 
     # create a node properties bin widget.
