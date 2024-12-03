@@ -6,14 +6,14 @@ on:
 
 jobs:
   build-and-deploy:
-    environment: PROD
+    environment: DEV
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python 3.10
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
@@ -22,12 +22,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install build twine
 
+      - name: Prepare package
+        run: rm -rf NodeGraphQtPy && mv NodeGraphQt NodeGraphQtPy
+
       - name: Build package
         run: python -m build
 
       - name: Publish to PyPI
         run: |
-          python -m twine upload --repository pypi dist/* --verbose
+          python -m twine upload --repository testpypi dist/* --verbose
         env:
           TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
           TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
