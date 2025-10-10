@@ -1,4 +1,7 @@
 
+# NOTICE: This project is deprecated.
+The purpose of this project was to add support for QtPy and both PySide2 and PySide6. The original project NodeGraph has now switch to using QtPy and this project is now redundant.
+
 # NodeGraphQtPy
 
 This is a fork of the [NodeGraphQt](https://github.com/jchanvfx/NodeGraphQt) repo, using 
